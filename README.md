@@ -49,15 +49,15 @@ python3 ftpbrute.py
  ```
 ## Usage
 
-`Target IP`: Enter the FTP server IP.
+- ** Target IP **: Enter the FTP server IP.
 
-`Username Wordlist`: Select a file with usernames (one per line).
+- ** Username Wordlist **: Select a file with usernames (one per line).
 
-`Password Wordlist`: Select a file with passwords (one per line).
+- ** Password Wordlist **: Select a file with passwords (one per line).
 
-`Start`: Begin brute-forcing.
+- ** Start **: Begin brute-forcing.
 
-`Stop`: Stop the brute force process anytime.
+- ** Stop **: Stop the brute force process anytime.
 
 ## Example  
 ```csharp
