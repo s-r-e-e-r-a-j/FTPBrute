@@ -28,7 +28,7 @@ FTPBrute is a GUI-based FTP brute-forcing tool created with Python. It allows yo
    ```bash
    git clone https://github.com/s-r-e-e-r-a-j/FTPBRUTE-TOOL.git
    ```
- ```  bash
+ ```bash
    cd FTPBrute
    ```
 ### Run the tool:
