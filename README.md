@@ -30,6 +30,8 @@ FTPBrute is a GUI-based FTP brute-forcing tool created with Python. It allows yo
 - **ftplib** (included with Python)
 - **tkinter** (included with Python)
 
+`All the requirements for this tool are pre-installed on kali linux .requirements means packages required for this tool to work.so don't need to install packages for this tool in kalilinux`
+
 ## Installation
 
 1. Clone the repository:
