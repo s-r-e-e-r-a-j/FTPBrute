@@ -4,7 +4,7 @@ FTPBrute is a GUI-based FTP brute-forcing tool created with Python. It allows yo
 
 **Created by Sreeraj**
 
-## Tool Interface
+## Tool Graphical Interface
 
 
 ![Screenshot 2024-11-05 222342](https://github.com/user-attachments/assets/0a6f8423-72be-4353-b188-2125d9345861)
