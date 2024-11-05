@@ -69,4 +69,4 @@ Brute force completed.
 ```
 ## License
 
-Open-source and free to use for ethical purposes.
+Open-source and free to use for ethical purposes.This respository is  MIT Licensed
