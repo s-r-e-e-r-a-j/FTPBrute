@@ -70,8 +70,10 @@ python3 ftpbrute.py
 4. `Click Start Brute Force` to begin the attack. The tool will display the progress, showing which combinations it is attempting.
 5. Once a valid combination is found, it will be displayed, and the tool will stop the attack.
 ## Example Screenshot
-
 An example of FTPBrute in action.
+![VirtualBox_KALILINUX1_16_11_2024_21_52_48](https://github.com/user-attachments/assets/f68377e2-ae6a-4258-95e1-14d43aefa494)
+
+
 
 ## Legal Disclaimer
 `FTPBrute` is intended for use by security professionals and ethical hackers to test their own systems or systems they have explicit permission to test. Unauthorized use of this tool to attack systems without permission is illegal and unethical.
