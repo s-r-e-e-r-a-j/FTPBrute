@@ -30,47 +30,53 @@ pip install paramiko
 ## Installation
 1 **Clone the Repository:** Clone the FTPBrute repository to your local machine using Git:
 
-bash
-Copy code
-git clone https://github.com/yourusername/FTPBrute.git
-cd FTPBrute
+```bash
+  https://github.com/s-r-e-e-r-a-j/FTPBRUTE-TOOL.git
+```
+```bash
+   cd FTPBRUTE-TOOL
+```
+```bash
+   cd FTPBrute
+   ```
 Run the Script: To start the tool, run the Python script:
 
-Copy code
-python ftp_brute_force_tool.py
-How to Use
-Launch the Application: When you run the script, the graphical user interface (GUI) will open.
+```bash
+python3 ftpbrute.py
+```
+## How to Use
+1. **Launch the Application:** When you run the script, the graphical user interface (GUI) will open.
 
-Set Target IP:
+2. **Set Target IP:**
 
-Enter the IP address of the FTP or SFTP server that you want to attack.
-Select the Protocol:
+- Enter the `IP address` of the FTP or SFTP server that you want to attack.
+3. **Select the Protocol:**
 
-Choose between FTP or SFTP by selecting the appropriate radio button.
-Choose Wordlists:
+- Choose between `FTP` or `SFTP` by selecting the appropriate radio button.
+4. **Choose Wordlists:**
 
-Username Wordlist: Click on "Select Username Wordlist" to choose a text file containing possible usernames.
-Password Wordlist: Similarly, click "Select Password Wordlist" to choose a text file with possible passwords.
-Start the Attack:
+- **Username Wordlist:** Click on "Select Username Wordlist" to choose a text file containing possible usernames.
+- **Password Wordlist:** Similarly, click "Select Password Wordlist" to choose a text file with possible passwords.
+5. **Start the Attack:**
 
-Once you’ve filled in all the necessary fields, click "Start Brute Force" to begin the attack. The tool will start trying combinations of usernames and passwords and show the results in real time.
-Stop the Attack:
+- Once you’ve filled in all the necessary fields, click "Start Brute Force" to begin the attack. The tool will start trying combinations of usernames and passwords and show the results in real time.
+6 **Stop the Attack:**
 
-If you need to stop the attack for any reason, click "Stop Brute Force".
-Example Workflow
-Open the tool and enter the target server's IP address.
-Select FTP or SFTP as the protocol.
-Choose your username and password wordlists from your local files.
-Click Start Brute Force to begin the attack. The tool will display the progress, showing which combinations it is attempting.
-Once a valid combination is found, it will be displayed, and the tool will stop the attack.
-Example Screenshot
+- If you need to stop the attack for any reason, click "Stop Brute Force".
+## Example Workflow
+1. Open the tool and enter the target server's IP address.
+2. Select `FTP` or `SFTP` as the protocol.
+3. Choose your username and password wordlists from your local files.
+4. `Click Start Brute Force` to begin the attack. The tool will display the progress, showing which combinations it is attempting.
+5. Once a valid combination is found, it will be displayed, and the tool will stop the attack.
+## Example Screenshot
 
 An example of FTPBrute in action.
 
-Legal Disclaimer
-FTPBrute is intended for use by security professionals and ethical hackers to test their own systems or systems they have explicit permission to test. Unauthorized use of this tool to attack systems without permission is illegal and unethical.
+## Legal Disclaimer
+`FTPBrute` is intended for use by security professionals and ethical hackers to test their own systems or systems they have explicit permission to test. Unauthorized use of this tool to attack systems without permission is illegal and unethical.
 
 By using this tool, you agree that you are solely responsible for any actions performed. The author of this tool does not accept responsibility for any damages or legal consequences caused by the misuse of this tool.
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
