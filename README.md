@@ -34,7 +34,7 @@ pip install paramiko
   https://github.com/s-r-e-e-r-a-j/FTPBRUTE-TOOL.git
 ```
 ```bash
-   cd FTPBRUTE-TOOL
+   cd FTPBrute
 ```
 ```bash
    cd FTPBrute
