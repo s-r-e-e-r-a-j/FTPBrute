@@ -31,7 +31,7 @@ pip install paramiko
 1 **Clone the Repository:** Clone the FTPBrute repository to your local machine using Git:
 
 ```bash
-  https://github.com/s-r-e-e-r-a-j/FTPBRUTE-TOOL.git
+  git clone https://github.com/s-r-e-e-r-a-j/FTPBrute.git
 ```
 ```bash
    cd FTPBrute
