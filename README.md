@@ -39,10 +39,16 @@ pip install paramiko
 ```bash
    cd FTPBrute
    ```
-Run the Script: To start the tool, run the Python script:
+2. install the tool
+   ```bash
+    sudo python3 install.py
+   ```
+   then type `y` for install
+   
+3. Run the tool: 
 
 ```bash
-python3 ftpbrute.py
+ftpbrute
 ```
 ## How to Use
 1. **Launch the Application:** When you run the script, the graphical user interface (GUI) will open.
@@ -73,7 +79,17 @@ python3 ftpbrute.py
 An example of FTPBrute in action.
 ![VirtualBox_KALILINUX1_16_11_2024_21_52_48](https://github.com/user-attachments/assets/f68377e2-ae6a-4258-95e1-14d43aefa494)
 
-
+## uninstalling
+```bash
+  cd FTPBrute
+```
+```bash
+cd FTPBrute
+```
+```bash
+ sudo python3 install.py
+```
+Then Enter `n` for uninstall
 
 ## Legal Disclaimer
 `FTPBrute` is intended for use by security professionals and ethical hackers to test their own systems or systems they have explicit permission to test. Unauthorized use of this tool to attack systems without permission is illegal and unethical.
