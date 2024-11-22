@@ -79,7 +79,7 @@ ftpbrute
 An example of FTPBrute in action.
 ![VirtualBox_KALILINUX1_16_11_2024_21_52_48](https://github.com/user-attachments/assets/f68377e2-ae6a-4258-95e1-14d43aefa494)
 
-## uninstalling
+## uninstallation
 ```bash
   cd FTPBrute
 ```
