@@ -41,7 +41,7 @@ pip install paramiko
    ```
 2. install the tool
  ```bash
-   sudo python3 install.py
+ sudo python3 install.py
    ```
    then type `y` for install
    
