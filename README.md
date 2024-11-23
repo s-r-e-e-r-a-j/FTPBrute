@@ -39,7 +39,7 @@ pip install paramiko
 ```bash
    cd FTPBrute
    ```
-2. install the tool
+2. install the tool:
  ```bash
  sudo python3 install.py
    ```
