@@ -45,7 +45,7 @@ pip install paramiko
    ```
    then type `y` for install
    
-4. Run the tool: 
+3. Run the tool: 
 
 ```bash
 ftpbrute
