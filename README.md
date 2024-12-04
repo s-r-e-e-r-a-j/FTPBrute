@@ -28,24 +28,26 @@ pip install paramiko
 `ftplib` and `tkinter` are part of the standard Python library, so no installation is needed for them.
 
 ## Installation
-1 **Clone the Repository:** Clone the FTPBrute repository to your local machine using Git:
+1. **Clone the Repository:** Clone the FTPBrute repository to your local machine using Git:
 
 ```bash
   git clone https://github.com/s-r-e-e-r-a-j/FTPBrute.git
 ```
+2. **Navigate to the FTPBrute directory**
 ```bash
    cd FTPBrute
 ```
+3. **Navigate to the FTPBrute directory**
 ```bash
    cd FTPBrute
    ```
-2. install the tool:
+4. install the tool:
  ```bash
  sudo python3 install.py
    ```
    then type `y` for install
    
-3. Run the tool: 
+5. Run the tool: 
 
 ```bash
 ftpbrute
