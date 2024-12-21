@@ -2,9 +2,9 @@
 
 
 ## FTPBrute - FTP & SFTP Brute Force Tool
-FTPBrute is a powerful brute-forcing tool designed to test the security of FTP and SFTP servers by performing dictionary-based attacks. It helps security researchers, penetration testers, and ethical hackers to assess the robustness of authentication mechanisms by attempting to crack login credentials using customizable wordlists for both usernames and passwords.
+FTPBrute is a powerful GUI-based brute-forcing tool designed to brute-force FTP and SFTP servers by performing dictionary-based attacks.
 
-This tool provides a user-friendly graphical interface that simplifies the process of running brute-force attacks against FTP and SFTP services, allowing users to test their servers’ security in a controlled environment.
+This tool provides a user-friendly graphical interface that simplifies the process of running brute-force attacks against FTP and SFTP services.
 
 ## Key Features
 - **Support for FTP & SFTP Protocols:** You can choose between FTP and SFTP for brute-forcing authentication credentials.
