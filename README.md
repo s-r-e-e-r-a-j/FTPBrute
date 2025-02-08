@@ -6,6 +6,12 @@ FTPBrute is a powerful GUI-based brute-forcing tool designed to brute-force FTP 
 
 This tool provides a user-friendly graphical interface that simplifies the process of running brute-force attacks against FTP and SFTP services.
 
+## Legal Disclaimer
+
+`FTPBrute` is intended for use by security professionals and ethical hackers to test their own systems or systems they have explicit permission to test. Unauthorized use of this tool to attack systems without permission is illegal and unethical.
+
+By using this tool, you agree that you are solely responsible for any actions performed. The author of this tool does not accept responsibility for any damages or legal consequences caused by the misuse of this tool.
+
 ## Key Features
 - **Support for FTP & SFTP Protocols:** You can choose between FTP and SFTP for brute-forcing authentication credentials.
 - **Custom Wordlist Support:** Easily load custom wordlists for usernames and passwords to tailor your attack.
@@ -93,10 +99,6 @@ sudo python3 install.py
 ```
 Then Enter `n` for uninstall
 
-## Legal Disclaimer
-`FTPBrute` is intended for use by security professionals and ethical hackers to test their own systems or systems they have explicit permission to test. Unauthorized use of this tool to attack systems without permission is illegal and unethical.
-
-By using this tool, you agree that you are solely responsible for any actions performed. The author of this tool does not accept responsibility for any damages or legal consequences caused by the misuse of this tool.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
