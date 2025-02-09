@@ -86,14 +86,19 @@ ftpbrute
    - If you need to stop the attack for any reason, click "Stop Brute Force".
 
 ## Example Workflow
+
 1. Open the tool and enter the target server's IP address.
 2. Select `FTP` or `SFTP` as the protocol.
-3. Choose your username and password wordlists from your local files.
-4. `Click Start Brute Force` to begin the attack. The tool will display the progress, showing which combinations it is attempting.
-5. Once a valid combination is found, it will be displayed, and the tool will stop the attack.
+3. (Optional) Enter a custom port if the FTP or SFTP server uses a non-standard port. The default ports are 21 for FTP and 22 for SFTP.
+4. Choose your username and password wordlists from your local files.
+5. `Click Start Brute Force` to begin the attack. The tool will display the progress, showing which combinations it is attempting.
+6. Once a valid combination is found, it will be displayed, and the tool will stop the attack.
+
 ## Example Screenshot
 An example of FTPBrute in action.
-![VirtualBox_KALILINUX1_16_11_2024_21_52_48](https://github.com/user-attachments/assets/f68377e2-ae6a-4258-95e1-14d43aefa494)
+
+![VirtualBox_klinux9_09_02_2025_16_36_03](https://github.com/user-attachments/assets/f0938a18-1d87-4cfe-a121-99c51ccfb9d0)
+
 
 ## uninstallation
 ```bash
