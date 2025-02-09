@@ -19,10 +19,10 @@ By using this tool, you agree that you are solely responsible for any actions pe
 ## Requirements
 To run FTPBrute, you will need Python 3.x and the following dependencies:
 
-`paramiko:` A library used for handling SFTP connections.
-`ftplib:` Python's built-in library for FTP connections.
-`tkinter:` Python's built-in GUI library for building the graphical user interface.
-`ssl:` A built-in Python library for FTPS connections.
+- `paramiko:` A library used for handling SFTP connections.
+- `ftplib:` Python's built-in library for FTP connections.
+- `tkinter:` Python's built-in GUI library for building the graphical user interface.
+- `ssl:` A built-in Python library for FTPS connections.
 ## Install Dependencies
 To install the required dependencies, you can use the following command:
 
