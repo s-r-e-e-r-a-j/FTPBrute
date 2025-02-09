@@ -98,8 +98,10 @@ ftpbrute
 5. Click` Start Brute Force` to begin the attack. The tool will display the progress, showing which combinations it is attempting.
 6. Once a valid combination is found, it will be displayed, and the tool will stop the attack.
 Example Screenshot
-An example of FTPBrute in action.
 
+## An example of FTPBrute in action.
+
+![VirtualBox_klinux9_09_02_2025_20_44_17](https://github.com/user-attachments/assets/346c5cdc-da92-4a86-9a2e-fd20a572a903)
 
 
 ## Uninstallation
