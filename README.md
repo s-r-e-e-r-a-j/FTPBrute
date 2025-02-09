@@ -63,7 +63,7 @@ ftpbrute
 
 - When you run the Tool, the graphical user interface (GUI) will open.
   
-2, **Set Target IP:**
+2. **Set Target IP:**
 
 - Enter the `IP address` of the FTP, SFTP, or FTPS server that you want to attack.
   
