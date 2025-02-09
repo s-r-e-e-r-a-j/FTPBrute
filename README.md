@@ -14,11 +14,13 @@ By using this tool, you agree that you are solely responsible for any actions pe
 
 ## Key Features
 - **Support for FTP & SFTP Protocols:** You can choose between FTP and SFTP for brute-forcing authentication credentials.
+- **Custom Port Support:** Optionally, specify custom ports for FTP (default is 21) and SFTP (default is 22) if the target uses non-standard ports.
 - **Custom Wordlist Support:** Easily load custom wordlists for usernames and passwords to tailor your attack.
 - **Real-Time Output:** View attack progress in real-time, with detailed feedback about each attempt.
 - **Success Detection:** The tool automatically stops once a successful login is found, saving time and resources.
 - **Abort Attack:** The ability to stop the brute force attack at any time.
 - **User-Friendly GUI:** The tool features a simple, intuitive graphical interface designed for ease of use.
+
 ## Requirements
 To run FTPBrute, you will need Python 3.x and the following dependencies:
 
@@ -59,24 +61,30 @@ pip install paramiko
 ftpbrute
 ```
 ## How to Use
-1. **Launch the Application:** When you run the script, the graphical user interface (GUI) will open.
+
+1. **Launch the Tool:**
+   - When you run the Tool, the graphical user interface (GUI) will open.
 
 2. **Set Target IP:**
+   - Enter the `IP address` of the FTP or SFTP server that you want to attack.
 
-- Enter the `IP address` of the FTP or SFTP server that you want to attack.
 3. **Select the Protocol:**
+   - Choose between `FTP` or `SFTP` by selecting the appropriate radio button.
 
-- Choose between `FTP` or `SFTP` by selecting the appropriate radio button.
-4. **Choose Wordlists:**
+4. **Optional Port (If Needed):**
+   - If the FTP or SFTP server uses a non-standard port, you can optionally specify the port number in the "Port" field. 
+   - The default port for FTP is 21 and for SFTP is 22, but you can enter a custom port if necessary.
 
-- **Username Wordlist:** Click on "Select Username Wordlist" to choose a text file containing possible usernames.
-- **Password Wordlist:** Similarly, click "Select Password Wordlist" to choose a text file with possible passwords.
-5. **Start the Attack:**
+5. **Choose Wordlists:**
+   - **Username Wordlist:** Click on "Select Username Wordlist" to choose a text file containing possible usernames.
+   - **Password Wordlist:** Similarly, click "Select Password Wordlist" to choose a text file with possible passwords.
 
-- Once you’ve filled in all the necessary fields, click "Start Brute Force" to begin the attack. The tool will start trying combinations of usernames and passwords and show the results in real time.
-6 **Stop the Attack:**
+6. **Start the Attack:**
+   - Once you’ve filled in all the necessary fields, click "Start Brute Force" to begin the attack. The tool will start trying combinations of usernames and passwords and show the results in real time.
 
-- If you need to stop the attack for any reason, click "Stop Brute Force".
+7. **Stop the Attack:**
+   - If you need to stop the attack for any reason, click "Stop Brute Force".
+
 ## Example Workflow
 1. Open the tool and enter the target server's IP address.
 2. Select `FTP` or `SFTP` as the protocol.
