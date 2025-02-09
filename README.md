@@ -97,7 +97,8 @@ ftpbrute
 ## Example Screenshot
 An example of FTPBrute in action.
 
-![VirtualBox_klinux9_09_02_2025_16_36_03](https://github.com/user-attachments/assets/f0938a18-1d87-4cfe-a121-99c51ccfb9d0)
+![VirtualBox_klinux9_09_02_2025_16_40_44](https://github.com/user-attachments/assets/58745a7b-66eb-40dd-9ce4-6ebdc9f99aa4)
+
 
 
 ## uninstallation
