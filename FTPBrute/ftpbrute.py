@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+
+# copyright © Sreeraj, 2024
+# https://github.com/s-r-e-e-r-a-j
+
 import ftplib
 import paramiko
 import tkinter as tk
