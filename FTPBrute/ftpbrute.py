@@ -210,6 +210,9 @@ class FTPBruteForceTool:
             ftps = ftplib.FTP_TLS(context=context)
             ftps.connect(target_ip, port)
             ftps.login(username, password)
+            # Ensure secure data connection after login
+            ftps.prot_p()  # Set the data connection protection level to private
+            
             ftps.quit()
             return True
         except ftplib.error_perm:
