@@ -10,7 +10,7 @@ By using this tool, you agree that you are solely responsible for any actions pe
 
 ## Key Features
 - **Support for FTP, SFTP & FTPS Protocols:** You can choose between FTP, SFTP, and FTPS for brute-forcing authentication credentials.
-- **Custom Port Support:** Optionally, specify custom ports for FTP (default is 21), SFTP (default is 22), and FTPS (default is 990) if the target uses non-standard ports.
+- **Custom Port Support:** Optionally, specify custom ports for FTP (default is 21), SFTP (default is 22), and FTPS (default is 21) if the target uses non-standard ports.
 - **Custom Wordlist Support:** Easily load custom wordlists for usernames and passwords to tailor your attack.
 - **Real-Time Output:** View attack progress in real-time, with detailed feedback about each attempt.
 - **Success Detection:** The tool automatically stops once a successful login is found, saving time and resources.
@@ -77,7 +77,7 @@ ftpbrute
 
 - If the FTP, SFTP, or FTPS server uses a non-standard port, you can optionally specify the port number in the "Port" field.
   
-- The default port for FTP is 21, for SFTP is 22, and for FTPS is 990, but you can enter a custom port if necessary.
+- The default port for FTP is 21, for SFTP is 22, and for FTPS is 21, but you can enter a custom port if necessary.
   
 5. **Choose Wordlists:**
 
