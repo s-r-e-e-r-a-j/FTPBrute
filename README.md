@@ -95,7 +95,7 @@ ftpbrute
 ## Example Workflow
 1. Open the tool and enter the target server's IP address.
 2. Select `FTP`, `SFTP`, or `FTPS `as the protocol.
-3. (Optional) Enter a custom port if the FTP, SFTP, or FTPS server uses a non-standard port. The default ports are 21 for FTP, 22 for SFTP, and 990 for FTPS.
+3. (Optional) Enter a custom port if the FTP, SFTP, or FTPS server uses a non-standard port. The default ports are 21 for FTP, 22 for SFTP, and 21 for FTPS.
 4. Choose your username and password wordlists from your local files.
 5. Click` Start Brute Force` to begin the attack. The tool will display the progress, showing which combinations it is attempting.
 6. Once a valid combination is found, it will be displayed, and the tool will stop the attack.
