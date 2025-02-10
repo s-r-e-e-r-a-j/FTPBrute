@@ -103,7 +103,7 @@ class FTPBruteForceTool:
 
         # If user entered a port number, use it; otherwise, use default values
         port_input = self.port_entry.get().strip()
-        port = int(port_input) if port_input.isdigit() else (990 if protocol == "FTPS" else (22 if protocol == "SFTP" else 21))
+        port = int(port_input) if port_input.isdigit() else (21 if protocol == "FTPS" else (22 if protocol == "SFTP" else 21))
 
         if not target_ip or not username_file or not password_file:
             messagebox.showwarning("Input Error", "Please fill all fields and select both wordlists.")
